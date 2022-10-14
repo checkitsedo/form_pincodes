@@ -9,6 +9,9 @@
             <trans-unit id="tx_formpincodes_domain_model_pincodes.pincode">
                 <source>Pincode Code</source>
             </trans-unit>
+			<trans-unit id="tx_formpincodes_domain_model_pincodes.is_active">
+                <source>Active</source>
+            </trans-unit>
             <trans-unit id="tx_formpincodes_domain_model_pincodes.is_used">
                 <source>Used</source>
             </trans-unit>
