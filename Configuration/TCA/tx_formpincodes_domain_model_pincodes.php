@@ -30,6 +30,14 @@ return [
                 'readOnly' => 0
             ]
         ],
+        'is_active' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:form_pincodes/Resources/Private/Language/locallang.xlf:tx_formpincodes_domain_model_pincodes.is_active',
+            'config' => [
+                'type' => 'check',
+                'readOnly' => 0
+            ]
+        ],
         'is_used' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:form_pincodes/Resources/Private/Language/locallang.xlf:tx_formpincodes_domain_model_pincodes.is_used',
