@@ -17,7 +17,7 @@ return [
     ],
     'types' => [
         '1' => [
-            'showitem' => 'pincode, is_used'
+            'showitem' => 'pincode, is_active, is_used'
         ]
     ],
     'columns' => [
