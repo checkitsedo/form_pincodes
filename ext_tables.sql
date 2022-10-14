@@ -6,6 +6,7 @@ CREATE TABLE tx_formpincodes_domain_model_pincodes (
     pid int(11) DEFAULT 0 NOT NULL,
 
     pincode varchar(25) DEFAULT '' NOT NULL,
+	  is_active tinyint(4) unsigned DEFAULT 0 NOT NULL,
 		is_used tinyint(4) unsigned DEFAULT 0 NOT NULL,
 
 
