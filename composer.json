@@ -1,0 +1,26 @@
+{
+  "name": "checkitsedo/form-pincodes",
+  "description": "TYPO3 CMS extension for sending defined pincodes with form e-mail finishers.",
+  "type": "typo3-cms-extension",
+  "keywords": ["TYPO3", "form", "pincode"],
+  "license": "GPL-2.0-or-later",
+  "authors": [
+      {
+          "name": "Dominik Senti",
+          "role": "Developer"
+      }
+  ],
+  "require": {
+    "typo3/cms-core": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Checkitsedo\\FormPincodes\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "form_pincodes"
+    }
+  }
+}
