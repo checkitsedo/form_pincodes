@@ -1,0 +1,14 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          finishersDefinition:
+            FormPincodesFinisher:
+              implementationClassName: 'Checkitsedo\FormPincodes\Domain\Finishers\FormPincodesFinisher'
+              formEditor:
+                label: 'Pincode'
+                options:
+                  identifier: 'pincodePageUid'
+                  addField: false
+                  fieldLabel: 'Pincode'
