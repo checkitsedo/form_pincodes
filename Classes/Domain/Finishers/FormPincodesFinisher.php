@@ -46,7 +46,7 @@ class FormPincodesFinisher extends \TYPO3\CMS\Form\Domain\Finishers\AbstractFini
                 ->select('uid', 'pincode')
                 ->from('tx_formpincodes_domain_model_pincodes')
                 ->where(
-                    $queryBuilder->expr()->eq('is_used', $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT))
+                    $queryBuilder->expr()->eq('is_active', $queryBuilder->createNamedParameter(1, \PDO::PARAM_INT))
                 )
                 ->setMaxResults(1)
                 ->execute()
@@ -61,7 +61,7 @@ class FormPincodesFinisher extends \TYPO3\CMS\Form\Domain\Finishers\AbstractFini
 
             $queryBuilder
                 ->update('tx_formpincodes_domain_model_pincodes')
-                ->set('is_used', 1)
+                ->set('is_active', 1)
                 ->set('pid', $pincodePageUid)
                 ->set('tstamp', (int)$GLOBALS['EXEC_TIME'])
                 ->where(
