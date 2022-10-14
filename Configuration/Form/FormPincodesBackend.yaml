@@ -1,0 +1,66 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              formEditor:
+                editors:
+                  900:
+                    selectOptions:
+                      1665729138:
+                        value: 'FormPincodesFinisher'
+                        label: 'FormPincodes'
+
+                propertyCollections:
+                  finishers:
+                    1665729138:
+                      identifier: 'FormPincodesFinisher'
+                      editors:
+                        100:
+                          identifier: header
+                          templateName: Inspector-CollectionElementHeaderEditor
+                          label: 'FormPincodes'
+                        200:
+                          identifier: 'pincodePageUid'
+                          templateName: 'Inspector-Typo3WinBrowserEditor'
+                          label: 'Pincode Codes Page'
+                          buttonLabel: 'formEditor.elements.Form.finisher.Redirect.editor.pageUid.buttonLabel'
+                          browsableType: pages
+                          propertyPath: 'options.pincodePageUid'
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'Integer'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
+                        250:
+                          identifier: 'checkSendEnabled'
+                          templateName: 'Inspector-CheckboxEditor'
+                          label: 'A field has to be checked for sending'
+                          propertyPath: 'options.checkSendEnabled'
+                        300:
+                          identifier: 'checkSend'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'Check this field'
+                          propertyPath: 'options.checkSend'
+                          enableFormelementSelectionButton: true
+                          propertyValidators:
+                            10: 'FormElementIdentifierWithinCurlyBracesInclusive'
+                        9999:
+                          identifier: removeButton
+                          templateName: Inspector-RemoveElementEditor
+
+
+          finishersDefinition:
+            FormPincodesFinisher:
+              formEditor:
+                iconIdentifier: 'form-finisher'
+                predefinedDefaults:
+                  options:
+                    addField: false
+                    fieldLabel: 'Pincode'
+                    prefix: ''
+              FormEngine:
+                label: 'Pincode'
+                200:
+                  identifier: 'pincodePageUid'
