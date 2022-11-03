@@ -3,6 +3,13 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2018-05-23T00:00:00Z" product-name="form_pincodes">
         <header/>
         <body>
+			<trans-unit id="tx_form_pincodes_pincode.name">
+                <source>Pincodes</source>
+            </trans-unit>
+			<trans-unit id="tx_form_pincodes_pincode.description">
+                <source>Form Pincodes</source>
+            </trans-unit>
+			
             <trans-unit id="tx_formpincodes_domain_model_pincodes">
                 <source>Pincodes</source>
             </trans-unit>
@@ -14,6 +21,15 @@
             </trans-unit>
             <trans-unit id="tx_formpincodes_domain_model_pincodes.is_used">
                 <source>Used</source>
+            </trans-unit>
+			
+			<!-- Form Validation -->
+            <trans-unit id="error.pincode.pincode.1221560718" xml:space="preserve">
+                <source>Please provide a pincode.</source>
+            </trans-unit>
+
+            <trans-unit id="flashSuccess" xml:space="preserve">
+                <source>Update des Datensatzes %1$s war Erfolgreich.</source>
             </trans-unit>
         </body>
     </file>
