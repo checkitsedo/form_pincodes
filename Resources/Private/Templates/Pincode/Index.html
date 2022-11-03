@@ -1,0 +1,6 @@
+<f:flashMessages />
+<f:for each="{pincodes}" as="pincode">
+    <h3>{pincode.pincode}</h3>
+  
+    <f:link.action action="edit" arguments="{pincode:pincode}">Edit</f:link.action>
+</f:for>
