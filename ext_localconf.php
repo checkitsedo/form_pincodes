@@ -28,6 +28,23 @@ call_user_func(
 			]
 		);
         
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:form_pincodes/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig">'
+        );
+        
+        // define icons to register
+        $iconsToRegister = [
+            'form_pincodes-plugin-pincode' => 'EXT:form_pincodes/Resources/Public/Icons/user_plugin_pincode.svg',
+        ];
+        // register defined icons
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+		foreach ($icons as $identifier => $path) {
+            $iconRegistry->registerIcon(
+                $identifier,
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => $path]
+            );
+        };
         
         
     }
